@@ -345,11 +345,10 @@ div.title a {
 
 /******************************************************
  * Dashboard Widget Spacing
+ * SAFE VERSION
  ******************************************************/
 td.stopgap,
 tr > td.stopgap {
-  display: table-cell !important;
-  visibility: visible !important;
   width: var(--custom-dashboard-widget-gap) !important;
   min-width: var(--custom-dashboard-widget-gap) !important;
   max-width: var(--custom-dashboard-widget-gap) !important;
@@ -388,10 +387,9 @@ table:has(td.stopgap) {
 
 /******************************************************
  * Glass Dashboard Widgets
- * One glass layer per individual widget.
+ * SAFE VERSION
  ******************************************************/
 tbody.sortable {
-  display: table !important;
   width: 100% !important;
   box-sizing: border-box !important;
   margin: 0 0 var(--custom-dashboard-widget-gap) 0 !important;
@@ -537,8 +535,6 @@ div.title * {
 
 /******************************************************
  * Glass Table Containers
- * Generic styling for Unraid pages wrapped in:
- * <div class="TableContainer">
  ******************************************************/
 div.TableContainer {
   background: var(--custom-dashboard-tile-bg) !important;
@@ -657,8 +653,6 @@ div.TableContainer input[type="checkbox"] {
 /******************************************************
  * Mobile Fix - Restore Horizontal Table Scrolling
  ******************************************************/
-
-/* Let Unraid table wrappers scroll horizontally on mobile */
 div.TableContainer {
   max-width: 100% !important;
   overflow-x: auto !important;
@@ -667,14 +661,12 @@ div.TableContainer {
   overscroll-behavior-x: contain !important;
 }
 
-/* Do not let inner tables clip their contents */
 div.TableContainer table,
 div.TableContainer table.unraid,
 div.TableContainer table.tablesorter {
   overflow: visible !important;
 }
 
-/* On smaller screens, preserve table width so it can scroll instead of crushing */
 @media screen and (max-width: 768px) {
   div.TableContainer table,
   div.TableContainer table.unraid,
@@ -684,7 +676,6 @@ div.TableContainer table.tablesorter {
   }
 }
 
-/* Keep the glass rounding while still allowing horizontal scrolling */
 div.TableContainer::-webkit-scrollbar {
   height: 8px !important;
 }
@@ -702,8 +693,6 @@ div.TableContainer::-webkit-scrollbar-thumb {
 /******************************************************
  * Users Page - Glass Bars + Theme Buttons
  ******************************************************/
-
-/* Users bar, Management Access bar, and Shares Access bar */
 #displaybox > div > div:nth-child(1),
 #title,
 #displaybox > div > div:nth-child(3) > div {
@@ -722,7 +711,6 @@ div.TableContainer::-webkit-scrollbar-thumb {
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.65) !important;
 }
 
-/* Keep icons/text inside those bars clean */
 #displaybox > div > div:nth-child(1) *,
 #title *,
 #displaybox > div > div:nth-child(3) > div * {
@@ -737,7 +725,6 @@ div.TableContainer::-webkit-scrollbar-thumb {
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.65) !important;
 }
 
-/* Users page action buttons */
 #displaybox > div > form > input[type="submit"],
 #displaybox > div > form > input[type="button"],
 #displaybox > div > form input[type="submit"],
@@ -755,7 +742,6 @@ div.TableContainer::-webkit-scrollbar-thumb {
   letter-spacing: 0.08em !important;
 }
 
-/* Users page action button hover */
 #displaybox > div > form > input[type="submit"]:hover,
 #displaybox > div > form > input[type="button"]:hover,
 #displaybox > div > form input[type="submit"]:hover,
@@ -768,7 +754,6 @@ div.TableContainer::-webkit-scrollbar-thumb {
   box-shadow: 0 0 16px color-mix(in srgb, var(--custom-theme-accent) 38%, transparent) !important;
 }
 
-/* Exact Add User button selector */
 #displaybox > div > form > input[type="submit"]:nth-child(1) {
   color: var(--custom-theme-accent) !important;
 }
@@ -776,8 +761,6 @@ div.TableContainer::-webkit-scrollbar-thumb {
 /******************************************************
  * Users Page - Normalize User Tiles
  ******************************************************/
-
-/* User tiles/cards under Management Access and Shares Access */
 #displaybox > div a:has(img),
 #displaybox > div div:has(> img),
 #displaybox > div span:has(> img) {
@@ -796,7 +779,6 @@ div.TableContainer::-webkit-scrollbar-thumb {
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.65) !important;
 }
 
-/* Username text inside tiles */
 #displaybox > div a:has(img) *,
 #displaybox > div div:has(> img) *,
 #displaybox > div span:has(> img) * {
@@ -804,7 +786,6 @@ div.TableContainer::-webkit-scrollbar-thumb {
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.65) !important;
 }
 
-/* User avatar image */
 #displaybox > div a:has(img) img,
 #displaybox > div div:has(> img) img,
 #displaybox > div span:has(> img) img {
@@ -816,8 +797,6 @@ div.TableContainer::-webkit-scrollbar-thumb {
 /******************************************************
  * Community Apps / Mobile Menu Glass Theming
  ******************************************************/
-
-/* Community Apps search area */
 body > div.searchAreaHolder.menuAdjust {
   background: var(--custom-dashboard-tile-bg) !important;
   background-color: var(--custom-dashboard-tile-bg) !important;
@@ -833,7 +812,6 @@ body > div.searchAreaHolder.menuAdjust {
   color: var(--custom-theme-text) !important;
 }
 
-/* Mobile menu panel */
 #mobileMenu > div {
   background: var(--custom-dashboard-tile-bg) !important;
   background-color: var(--custom-dashboard-tile-bg) !important;
@@ -849,7 +827,6 @@ body > div.searchAreaHolder.menuAdjust {
   color: var(--custom-theme-text) !important;
 }
 
-/* Mobile menu text/icons */
 #mobileMenu > div,
 #mobileMenu > div *,
 body > div.searchAreaHolder.menuAdjust,
@@ -858,22 +835,17 @@ body > div.searchAreaHolder.menuAdjust * {
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.65) !important;
 }
 
-/* Specific Community Apps category text */
 #category_list > ul > li:nth-child(4) {
   color: var(--custom-theme-accent) !important;
 }
 
-/* Specific Spotlight app name text */
 #templates_content > div.ca_homeTemplates.homeonlynew.caHomeSpotlight > div:nth-child(3) > div > div.ca_appPopup.ca_backgroundClickable > div.ca_applicationName.ellipsis {
   color: var(--custom-theme-accent) !important;
 }
 
-
 /******************************************************
  * Community Apps Cards - Match Home Widget Glass
  ******************************************************/
-
-/* Main Community Apps cards / spotlight cards */
 .ca_holder,
 .ca_holder.spotlightHome,
 .ca_holder.ca_appPopup,
@@ -895,7 +867,6 @@ body > div.searchAreaHolder.menuAdjust * {
   color: var(--custom-theme-text) !important;
 }
 
-/* Remove nested gray/solid layers inside cards */
 .ca_holder .ca_appPopup,
 .ca_holder .ca_backgroundClickable,
 .ca_holder .cardDescription,
@@ -912,7 +883,6 @@ body > div.searchAreaHolder.menuAdjust * {
   box-shadow: none !important;
 }
 
-/* App name / important card text */
 .ca_holder .ca_applicationName,
 .ca_holder .ca_applicationName.ellipsis,
 .ca_holder .cardCategory {
@@ -920,7 +890,6 @@ body > div.searchAreaHolder.menuAdjust * {
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.65) !important;
 }
 
-/* Description/body text */
 .ca_holder .cardDescription,
 .ca_holder .cardDesc,
 .ca_holder .ca_author,
@@ -929,7 +898,6 @@ body > div.searchAreaHolder.menuAdjust * {
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.65) !important;
 }
 
-/* Community Apps card buttons */
 .ca_holder .caButton,
 .ca_holder .infoButton,
 .ca_holder .supportButton,
@@ -946,7 +914,6 @@ body > div.searchAreaHolder.menuAdjust * {
   text-shadow: 0 0 6px color-mix(in srgb, var(--custom-theme-accent) 35%, transparent) !important;
 }
 
-/* Button hover */
 .ca_holder .caButton:hover,
 .ca_holder .infoButton:hover,
 .ca_holder .supportButton:hover,
@@ -959,7 +926,6 @@ body > div.searchAreaHolder.menuAdjust * {
   box-shadow: 0 0 16px color-mix(in srgb, var(--custom-theme-accent) 38%, transparent) !important;
 }
 
-/* Favorite / pinned / plugin badges */
 .ca_holder .appPlugin,
 .ca_holder .favCardBackground,
 .ca_holder .favCardBackgroundHide,
@@ -969,30 +935,15 @@ body > div.searchAreaHolder.menuAdjust * {
   border-color: var(--custom-theme-accent) !important;
 }
 
-/* App icon stays clean */
 .ca_holder img.ca_displayIcon {
   background: transparent !important;
   border: 0 !important;
   box-shadow: none !important;
 }
 
-
 /******************************************************
  * Community Apps Card Description - Keep White
  ******************************************************/
-
-.cardDesc,
-.ca_holder .cardDesc,
-.ca_holder .cardDescription .cardDesc {
-  color: #ffffff !important;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.65) !important;
-}
-
-
-/******************************************************
- * Community Apps Card Description - Keep White
- ******************************************************/
-
 .cardDesc,
 .ca_holder .cardDesc,
 .ca_holder .cardDescription .cardDesc {
@@ -1003,7 +954,6 @@ body > div.searchAreaHolder.menuAdjust * {
 /******************************************************
  * Community Apps Card Category - Keep White
  ******************************************************/
-
 .cardCategory,
 .ca_holder .cardCategory {
   color: #ffffff !important;
@@ -1013,7 +963,6 @@ body > div.searchAreaHolder.menuAdjust * {
 /******************************************************
  * Community Apps Card Author - Keep White
  ******************************************************/
-
 .ca_author,
 .ca_author.ellipsis,
 .ca_holder .ca_author,
