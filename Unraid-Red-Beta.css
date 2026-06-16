@@ -42,7 +42,7 @@ body {
 
 body {
   background-color: #1f0909 !important;
-  background-image: url('https://zupimages.net/up/26/25/17n3.jpg') !important;
+  background-image: url('/plugins/custom.css/assets/bg.jpg') !important;
   background-size: cover !important;
   background-position: center center !important;
   background-repeat: no-repeat !important;
