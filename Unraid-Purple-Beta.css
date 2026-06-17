@@ -30,7 +30,6 @@
   --custom-theme-nav-line: #00c853;
 }
 
-
 /******************************************************
  * Background Image
  ******************************************************/
@@ -65,7 +64,6 @@ div.content,
   background: transparent !important;
   background-color: transparent !important;
 }
-
 
 /******************************************************
  * Transparent Header + Themed Header Branding
@@ -127,7 +125,6 @@ div.content,
   color: transparent !important;
   text-shadow: 0 0 8px rgba(192, 132, 252, 0.45) !important;
 }
-
 
 /******************************************************
  * Dashboard Control / Action Icons
@@ -224,7 +221,6 @@ i.fa.fa-fw.fa-info-circle.control {
   outline: 0 !important;
 }
 
-
 /******************************************************
  * Glass Navigation Menu
  ******************************************************/
@@ -310,7 +306,6 @@ div.nav-title::after,
   color: var(--custom-theme-nav-line) !important;
 }
 
-
 /******************************************************
  * Dashboard Widget Links / Accent Text
  ******************************************************/
@@ -341,7 +336,6 @@ div.title a {
   fill: var(--custom-theme-accent-strong) !important;
   stroke: var(--custom-theme-accent-strong) !important;
 }
-
 
 /******************************************************
  * Dashboard Widget Spacing
@@ -384,7 +378,6 @@ table:has(td.stopgap) {
   border-spacing: 0 !important;
   overflow: visible !important;
 }
-
 
 /******************************************************
  * Glass Dashboard Widgets
@@ -473,7 +466,6 @@ tbody.sortable > tr:hover > th {
   background-image: none !important;
 }
 
-
 /******************************************************
  * Docker Containers Widget - Remove Per-Container Backgrounds
  ******************************************************/
@@ -504,7 +496,6 @@ tbody#docker_view,
   padding-bottom: 3px !important;
 }
 
-
 /******************************************************
  * Glass Section Titles
  ******************************************************/
@@ -533,7 +524,6 @@ div.title,
 div.title * {
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.65) !important;
 }
-
 
 /******************************************************
  * Glass Table Containers
@@ -868,7 +858,6 @@ body > div.searchAreaHolder.menuAdjust * {
   color: var(--custom-theme-accent) !important;
 }
 
-
 /******************************************************
  * Community Apps Cards - Match Home Widget Glass
  ******************************************************/
@@ -976,7 +965,6 @@ body > div.searchAreaHolder.menuAdjust * {
   box-shadow: none !important;
 }
 
-
 /******************************************************
  * Community Apps Card Description - Keep White
  ******************************************************/
@@ -1007,5 +995,85 @@ body > div.searchAreaHolder.menuAdjust * {
 .ca_holder .ca_author,
 .ca_holder .ca_author.ellipsis {
   color: #ffffff !important;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.65) !important;
+}
+
+/******************************************************
+ * Settings Page Only - Glass Panels
+ ******************************************************/
+
+/* Settings category bars */
+body:has(#displaybox .Panels) div.title,
+body:has(#displaybox .Panels) #title {
+  background: var(--custom-dashboard-tile-bg) !important;
+  background-color: var(--custom-dashboard-tile-bg) !important;
+  background-image: none !important;
+
+  backdrop-filter: blur(var(--custom-dashboard-tile-blur)) saturate(145%) !important;
+  -webkit-backdrop-filter: blur(var(--custom-dashboard-tile-blur)) saturate(145%) !important;
+
+  border: 1px solid var(--custom-dashboard-tile-border) !important;
+  border-radius: var(--custom-dashboard-tile-radius) !important;
+  box-shadow: var(--custom-dashboard-tile-shadow) !important;
+
+  color: #ffffff !important;
+}
+
+/* Settings page button cards */
+body:has(#displaybox .Panels) .Panels .Panel {
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+/* Apply the glass to the clickable card itself */
+body:has(#displaybox .Panels) .Panels .Panel > a {
+  position: relative !important;
+  text-decoration: none !important;
+  padding: 1rem !important;
+  display: grid !important;
+  gap: 1rem !important;
+  align-items: flex-start !important;
+  justify-content: center !important;
+  text-align: center !important;
+  box-sizing: border-box !important;
+  max-width: 120px !important;
+  min-height: 98px !important;
+
+  background: var(--custom-dashboard-tile-bg) !important;
+  background-color: var(--custom-dashboard-tile-bg) !important;
+  background-image: none !important;
+
+  backdrop-filter: blur(var(--custom-dashboard-tile-blur)) saturate(145%) !important;
+  -webkit-backdrop-filter: blur(var(--custom-dashboard-tile-blur)) saturate(145%) !important;
+
+  border: 1px solid var(--custom-dashboard-tile-border) !important;
+  border-radius: var(--custom-dashboard-tile-radius) !important;
+  box-shadow: var(--custom-dashboard-tile-shadow) !important;
+
+  overflow: hidden !important;
+}
+
+/* Hover */
+body:has(#displaybox .Panels) .Panels .Panel > a:hover {
+  background: rgba(255, 255, 255, 0.08) !important;
+  background-color: rgba(255, 255, 255, 0.08) !important;
+  border-color: var(--custom-theme-accent) !important;
+}
+
+/* Icons */
+body:has(#displaybox .Panels) .Panels .Panel .PanelIcon,
+body:has(#displaybox .Panels) .Panels .Panel .PanelImg,
+body:has(#displaybox .Panels) .Panels .Panel i {
+  color: #ffffff !important;
+  fill: #ffffff !important;
+  stroke: #ffffff !important;
+}
+
+/* Text */
+body:has(#displaybox .Panels) .Panels .Panel .PanelText {
+  color: var(--custom-theme-accent) !important;
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.65) !important;
 }
