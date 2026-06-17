@@ -1167,6 +1167,21 @@ img.img {
   padding-left: 8px !important;
 }
 
+/* FolderView Plus - add gap between folder icon and folder name */
+#docker_view span.folder-inner-docker {
+  padding-left: 8px !important;
+}
+
+/* Docker page (DockerContainers.page) - add gap between container icon and
+   name/state block. span.inner wraps both the name (line 1) and the
+   play/stop icon + state text (line 2), so margin goes on span.inner itself
+   to keep the icon aligned under the name instead of under the logo. */
+#docker_list span.inner.started,
+#docker_list span.inner.stopped,
+#docker_list span.inner {
+  margin-left: 8px !important;
+}
+
 /******************************************************
  * Settings Page Only - Glass Panels
  ******************************************************/
