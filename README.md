@@ -1,5 +1,7 @@
 # Unraid Glass Themes
 
+FIX AND SUPPORT FOR FOLDERVIEWPLUS PLUGING
+
 Custom glass-style themes for the Unraid WebUI with matching **Purple** and **Red** variants.
 
 These themes provide a modern translucent interface while preserving readability and the overall Unraid experience.
